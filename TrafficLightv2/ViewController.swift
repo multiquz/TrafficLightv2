@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func changeColorButtonTapped() {
-        if redLightView.layer.opacity == 0.5 {
+        if redLightView.layer.opacity == 0.5 && yellowLightView.layer.opacity == 0.5 && greenLightView.layer.opacity == 0.5 {
             redLightView.layer.opacity = 1
             changeColorButton.setTitle("Next", for: .normal)
         } else if redLightView.layer.opacity == 1 {
