@@ -14,30 +14,36 @@ class ViewController: UIViewController {
     @IBOutlet var greenLightView: UIView!
     @IBOutlet var changeColorButton: UIButton!
     
+    let lightISOn: Float = 1
+    let lightisOff: Float = 0.5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changeColorButton.layer.cornerRadius = 10
-        redLightView.layer.cornerRadius = 64
-        redLightView.layer.opacity = 0.5
-        yellowLightView.layer.cornerRadius = 64
-        yellowLightView.layer.opacity = 0.5
-        greenLightView.layer.cornerRadius = 64
-        greenLightView.layer.opacity = 0.5
+        redLightView.layer.opacity = lightisOff
+        yellowLightView.layer.opacity = lightisOff
+        greenLightView.layer.opacity = lightisOff
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redLightView.layer.cornerRadius = redLightView.bounds.height / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.bounds.height / 2
+        greenLightView.layer.cornerRadius = greenLightView.bounds.height / 2
     }
 
     @IBAction func changeColorButtonTapped() {
-        if redLightView.layer.opacity == 0.5 && yellowLightView.layer.opacity == 0.5 && greenLightView.layer.opacity == 0.5 {
-            redLightView.layer.opacity = 1
+        if redLightView.layer.opacity == lightisOff && yellowLightView.layer.opacity == lightisOff && greenLightView.layer.opacity == lightisOff {
+            redLightView.layer.opacity = lightISOn
             changeColorButton.setTitle("Next", for: .normal)
-        } else if redLightView.layer.opacity == 1 {
-            yellowLightView.layer.opacity = 1
-            redLightView.layer.opacity = 0.5
-        } else if yellowLightView.layer.opacity == 1 {
-            greenLightView.layer.opacity = 1
-            yellowLightView.layer.opacity = 0.5
-        } else if greenLightView.layer.opacity == 1 {
-            redLightView.layer.opacity = 1
-            greenLightView.layer.opacity = 0.5
+        } else if redLightView.layer.opacity == lightISOn {
+            yellowLightView.layer.opacity = lightISOn
+            redLightView.layer.opacity = lightisOff
+        } else if yellowLightView.layer.opacity == lightISOn {
+            greenLightView.layer.opacity = lightISOn
+            yellowLightView.layer.opacity = lightisOff
+        } else if greenLightView.layer.opacity == lightISOn {
+            redLightView.layer.opacity = lightISOn
+            greenLightView.layer.opacity = lightisOff
         }
     }
 }
