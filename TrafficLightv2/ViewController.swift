@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet var greenLightView: UIView!
     @IBOutlet var changeColorButton: UIButton!
     
-    let lightISOn: Float = 1
-    let lightisOff: Float = 0.5
+    private let lightISOn: Float = 1
+    private let lightisOff: Float = 0.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,14 @@ class ViewController: UIViewController {
         greenLightView.layer.cornerRadius = greenLightView.bounds.height / 2
     }
 
+    
     @IBAction func changeColorButtonTapped() {
+        if changeColorButton.currentTitle == "Start" {
+            changeColorButton.setTitle("Next", for: .normal)
+        }
+                
         if redLightView.layer.opacity == lightisOff && yellowLightView.layer.opacity == lightisOff && greenLightView.layer.opacity == lightisOff {
             redLightView.layer.opacity = lightISOn
-            changeColorButton.setTitle("Next", for: .normal)
         } else if redLightView.layer.opacity == lightISOn {
             yellowLightView.layer.opacity = lightISOn
             redLightView.layer.opacity = lightisOff

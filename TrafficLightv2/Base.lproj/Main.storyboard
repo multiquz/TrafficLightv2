@@ -38,7 +38,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4Z-rs-d9V">
-                                <rect key="frame" x="188.66666666666666" y="707" width="51" height="41"/>
+                                <rect key="frame" x="188.66666666666666" y="713" width="51" height="41"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="D3A-uA-Qpw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="5aU-vi-EH1"/>
                             <constraint firstItem="D3A-uA-Qpw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MaA-bA-hYq"/>
                             <constraint firstItem="D3A-uA-Qpw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="RMP-e1-UbV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q4Z-rs-d9V" secondAttribute="bottom" constant="144" id="ono-4V-NSU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q4Z-rs-d9V" secondAttribute="bottom" constant="138" id="ono-4V-NSU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D3A-uA-Qpw" secondAttribute="trailing" constant="150" id="uRV-gE-chB"/>
                             <constraint firstItem="q4Z-rs-d9V" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vWj-o6-owj"/>
                         </constraints>
